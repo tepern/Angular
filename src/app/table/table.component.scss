@@ -1,0 +1,22 @@
+:host {
+  width: 100%;
+}
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+
+  &__item {
+    flex-basis: calc(100%/7);
+    border: solid 1px red;
+
+    &.table__item_before {
+      border: solid 1px transparent;
+
+      & > * {
+          box-shadow: none;
+        }
+    }
+  }
+}

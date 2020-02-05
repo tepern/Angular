@@ -1,0 +1,11 @@
+<div class="table">
+   <tr class="table">
+       <td *ngFor = "let item of daysBefore" [ngStyle]="{'order':item}" class="table__item table__item_before"><cell [cellItem]="item"></cell></td>
+       <td *ngFor = "let item of dates" [ngStyle]="{'order':item}" class="table__item"><cell [cellItem]="item.getDate()"></cell></td>
+   </tr>
+
+</div>
+
+
+
+
