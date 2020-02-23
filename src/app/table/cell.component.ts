@@ -5,7 +5,7 @@ import { Input, Component,  OnInit } from '@angular/core';
   templateUrl: './cell.component.html',
   styleUrls: ['./cell.component.scss']
 })
-export class CellComponent implements OnInit, OnChanges {
+export class CellComponent implements OnInit {
 
    @Input() cellItem: any;
 

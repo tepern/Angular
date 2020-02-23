@@ -18,5 +18,82 @@
           box-shadow: none;
         }
     }
+
+    &.table__item_days {
+      margin-top: 5px;
+      border-left: solid 1px #f0f0f0;
+      border-right: solid 1px #f0f0f0;
+      border-bottom: solid 1px #f0f0f0;
+      border-top: 1px solid transparent;
+
+      & > * {
+          box-shadow: none;
+        }
+    }
+  }
+
+  &-menu {
+     display: flex;
+     padding: 20px 0;
+     align-items: center;
+     box-shadow: 5px 1px 5px red;
+  }
+}
+
+
+.current-month {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px dashed black;
+  }
+
+  &__value {
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.buttons-control {
+  
+}
+
+.btn {
+  
+  &-control {
+    position: relative;
+    height: 30px;
+    width: 30px;
+
+    &::before {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 5px);
+        width: 10px;
+        height: 10px;
+        content: "";
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+     }
+
+    &_next {
+
+      &::before {
+        transform: rotate(45deg);
+      }
+    }
+
+    &_prev {
+
+      &::before {
+        transform: rotate(-135deg);
+      } 
+    }
   }
 }

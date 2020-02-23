@@ -1,5 +1,17 @@
+<div class="table-menu">
+  <div class="current-month">
+    <div class="current-month__title">Today:</div>
+    <div class="current-month__value">{{ month | date: "MMMM yyyy" }}</div>
+  </div>
+  <div class="buttons-control">
+    <button class="btn btn-control btn-control_prev" (click) = "nextMonth(month.getMonth()-1,month.getFullYear())"></button>
+    <button class="btn btn-control btn-control_next" (click) = "nextMonth(month.getMonth()+1,month.getFullYear())"></button>
+  </div>
+  
+</div>
 <div class="table">
    <tr class="table">
+       <td *ngFor = "let item of items" [ngStyle]="{'order':item}" class="table__item table__item_days ">{{item}}</td>
        <td *ngFor = "let item of daysBefore" [ngStyle]="{'order':item}" class="table__item table__item_before"><cell [cellItem]="item"></cell></td>
        <td *ngFor = "let item of dates" [ngStyle]="{'order':item}" class="table__item"><cell [cellItem]="item.getDate()"></cell></td>
    </tr>
