@@ -7,7 +7,16 @@ import { CellComponent } from './table/cell.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { PopupComponent } from './left-panel/popup.component';
 import { PopupService } from './left-panel/popup.service';
+import { FormsModule } from '@angular/forms';
+import { DayComponent }   from './day/day.component';
+import { HomeComponent }   from './home.component';
 
+import {Routes, RouterModule} from '@angular/router';
+
+const appRoutes: Routes =[
+    { path: '', component: HomeComponent },
+    { path: 'day', component: DayComponent}
+];
 
 @NgModule({
   declarations: [
@@ -15,11 +24,15 @@ import { PopupService } from './left-panel/popup.service';
     TableComponent,
     CellComponent,
     LeftPanelComponent,
-    PopupComponent
+    PopupComponent,
+    DayComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [LeftPanelComponent,PopupService],
   bootstrap: [AppComponent],

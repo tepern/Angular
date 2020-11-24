@@ -3,6 +3,8 @@ import { createCustomElement } from '@angular/elements';
 import { PopupService } from './popup.service';
 import { PopupComponent } from './popup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 
 @Component({
